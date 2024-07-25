@@ -215,6 +215,30 @@ app.post('/historico_saude', async(req, res)=>{
     })
 })
 
+//falta a rota do alerta
+app.post('/alerta_saude', async(req, res)=>{
+    let dia = new Date().getDate()
+    let mes = new Date().getMonth()
+    let ano = new Date().getFullYear()
+    let data = `${dia}/${mes}/${ano}`
+
+    let hora_agora = new Date().getHours()
+    let minuto = new Date().getMinutes()
+    let hora = `${hora_agora}:${minuto}`
+    let equipe_saude = req.body.equipe_saude;
+    let nome_saude = req.body.nome_saude;
+    let ine_saude = req.body.ine_saude;
+    let cpf_saude = req.body.cpf_saude;
+    res.render('saude/inform_alerta_saude',{
+        data:data,
+        hora:hora,
+        equipe_saude: equipe_saude,
+        nome_saude: nome_saude,
+        ine_saude: ine_saude,
+        cpf_saude: cpf_saude
+    })
+})
+
 app.post('/checklist_saude',  async(req, res)=>{
     let dia = new Date().getDate()
     let mes = new Date().getMonth()
@@ -244,6 +268,6 @@ app.post('/checklist_saude',  async(req, res)=>{
 })
 
 
-//falta a rota do alerta
+
 
 app.listen(port)

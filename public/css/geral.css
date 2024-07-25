@@ -22,7 +22,12 @@ main{
     color: rgb(80, 80, 80);
     line-height: 22px;
 }
-
+h1{
+    color: rgb(80, 80, 80);
+}
+p{
+    color: rgb(80, 80, 80);
+}
 /*MENUS CIDADÃO, PROF ESCOLA E PROF SAÚDE*/
 .cards_menuCidadao p{
     color: rgb(80, 80, 80);
