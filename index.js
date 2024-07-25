@@ -153,4 +153,83 @@ app.post('/checklist_escola', async(req, res)=>{
 
 
 
+
+//SAUDE
+app.get('/termo_saude', async(req , res)=>{
+    res.render('saude/termo_saude')
+})
+
+app.post('/login_saude', async(req, res)=>{
+    res.render('saude/login_saude')
+})
+
+app.post('/ir_menu_saude', async(req, res)=>{
+    let equipe_saude = req.body.equipe_saude;
+    let nome_saude = req.body.nome_saude;
+    let ine_saude = req.body.ine_saude;
+    let cpf_saude = req.body.cpf_saude;
+    res.render('saude/menu_saude',{
+        equipe_saude: equipe_saude,
+        nome_saude: nome_saude,
+        ine_saude: ine_saude,
+        cpf_saude: cpf_saude 
+    })
+})
+
+app.post('/login_saude_cidadao', async(req, res)=>{
+    let equipe_saude = req.body.equipe_saude;
+    let nome_saude = req.body.nome_saude;
+    let ine_saude = req.body.ine_saude;
+    let cpf_saude = req.body.cpf_saude;
+    res.render('saude/login_saude_cidadao',{
+        equipe_saude: equipe_saude,
+        nome_saude: nome_saude,
+        ine_saude: ine_saude,
+        cpf_saude: cpf_saude
+    })
+})
+
+app.post('/historico_saude', async(req, res)=>{
+    let equipe_saude = req.body.equipe_saude;
+    let nome_saude = req.body.nome_saude;
+    let ine_saude = req.body.ine_saude;
+    let cpf_saude = req.body.cpf_saude;
+    res.render('saude/historico_saude',{
+        equipe_saude: equipe_saude,
+        nome_saude: nome_saude,
+        ine_saude: ine_saude,
+        cpf_saude: cpf_saude 
+    })
+})
+
+app.post('/checklist_saude',  async(req, res)=>{
+    let dia = new Date().getDate()
+    let mes = new Date().getMonth()
+    let ano = new Date().getFullYear()
+    let data = `${dia}/${mes}/${ano}`
+
+    let hora_agora = new Date().getHours()
+    let minuto = new Date().getMinutes()
+    let hora = `${hora_agora}:${minuto}`
+
+    let nome = req.body.nome;
+    let cpf = req.body.cpf;
+    let equipe_saude = req.body.equipe_saude;
+    let nome_saude = req.body.nome_saude;
+    let ine_saude = req.body.ine_saude;
+    let cpf_saude = req.body.cpf_saude;
+    res.render('saude/checklist_saude',{
+        data:data,
+        hora:hora,
+        nome:nome,
+        cpf:cpf,
+        equipe_saude: equipe_saude,
+        nome_saude: nome_saude,
+        ine_saude: ine_saude,
+        cpf_saude: cpf_saude
+    })
+})
+
+
+
 app.listen(port)

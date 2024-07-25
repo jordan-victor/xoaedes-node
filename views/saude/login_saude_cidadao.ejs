@@ -1,0 +1,53 @@
+<%- include('../layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>Olá, <%= nome_saude %></h1>
+            </div>
+            <p>Insira os dados do Cidadão</p>
+        </header>
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <main id="cadastroSaude">
+        <section class="form_cadastro">
+            <form id="form_cidadaoS">
+                <input type="text" name="equipe_saude" value="<%= equipe_saude %>" style="display: none!important">
+                <input type="text" name="nome_saude" value="<%= nome_saude %>" style="display:none!important">
+                <input type="text" name="cpf_saude" value="<%= cpf_saude %>" style="display:none!important">
+                <input type="text" name="ine_saude" value="<%= ine_saude %>" style="display:none!important">
+    
+                <div class="icone_saudeCidadao">
+                    <img src="/img/tipoUsuarios/cidadao.png" alt="Profissional de Saúde" width="75px">
+                    <i class="fa-solid fa-arrow-right"></i>
+                    <img src="/img/checklist.png" alt="Cidadão" width="75px">
+                </div>
+                <P id="cpf_statusS" class="cpf_status"></P>
+                <input type="text" id="nome_cidadaoS" name="nome"  placeholder="Nome" required>
+                <input type="text" id="cpf_cidadaoS" name="cpf" maxlength="14" placeholder="CPF" required>
+                <button class="formBtn" id="btn_saude" onclick="acessoSaudeCidadao()">INICIAR</button>
+            </form>
+        </section>
+    </main>
+
+
+    <script src="/js/scripts_saude/irChecklist.js"></script>
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>   
+<%- include('../layouts/footer') %>

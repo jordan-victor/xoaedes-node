@@ -1,0 +1,52 @@
+<%- include('../layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>PROFISSIONAL DE SAÚDE</h1>
+            </div>
+            <p>Entre com seus dados</p>
+        </header>
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <main id="cadastroSaude">
+        <section class="img_cadastro">
+            <div> <img src="/img/logo.png" alt="Logo"> </div>
+        </section>
+    
+        <section class="form_cadastro">
+            <form id="form_saude">
+                <img src="/img/tipoUsuarios/prof-saude.png" alt="Profissional de Saúde" width="75px">
+                <p id="ine_status"></p>
+                <input type="text" id="equipe_saude" name="equipe_saude" value="" readonly style="display:none!important">
+                <input type="text" id="nome_saude" name="nome_saude"  placeholder="Nome" required>
+                <input type="text" id="cpf_saude" name="cpf_saude" maxlength="14" placeholder="CPF" required>
+                <input type="number" id="ine_saude" name="ine_saude" placeholder="CNES" required>
+                <button class="formBtn" id="btn_saude" onclick="acessoSaude()">ACESSAR</button>
+            </form>
+        </section>
+    
+        <p id="prosseguir" style="display:none!important;"></p>
+    </main>
+
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>   
+<%- include('../layouts/footer') %>

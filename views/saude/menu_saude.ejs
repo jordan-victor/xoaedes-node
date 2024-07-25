@@ -1,0 +1,86 @@
+<%- include('../layouts/header') %>
+
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>Olá, <%= nome_saude %></h1>
+            </div>
+            <p><%= equipe_saude %></p> 
+        </header>
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <div id="container_menuSaude">
+        <main id="menu_cidadao">
+           
+            <div class="cards_menuCidadao">
+                <form class="card_menuCidadao" action="/login_saude_cidadao" method="POST">                   
+                    <input type="text" name="nome_saude" value="<%=nome_saude%>">
+                    <input type="text" name="cpf_saude" value="<%=cpf_saude%>">
+                    <input type="text" name="ine_saude" value="<%=ine_saude%>">
+                    <input type="text" name="equipe_saude" value="<%=equipe_saude%>">
+                    <button type="submit">
+                        <img src="/img/iconesMenu/checked.png" alt="ícones">
+                        <p>CHECKLIST</p>
+                    </button>               
+                </form>
+
+                <form class="card_menuCidadao" action="/historico_saude" method="POST">
+                    <input type="text" name="nome_saude" value="<%=nome_saude%>">
+                    <input type="text" name="cpf_saude" value="<%=cpf_saude%>">
+                    <input type="text" name="ine_saude" value="<%=ine_saude%>">
+                    <input type="text" name="equipe_saude" value="<%=equipe_saude%>">
+                    <button type="submit">
+                        <img src="/img/iconesMenu/historico.png" alt="ícones">
+                        <p>HISTÓRICO CHECKLIST</p>
+                    </button>
+                </form>
+                
+                <form class="card_menuCidadao" action="/informacoes_saude" method="POST">
+                    <input type="text" name="nome_saude" value="<%=nome_saude%>">
+                    <input type="text" name="cpf_saude" value="<%=cpf_saude%>">
+                    <input type="text" name="ine_saude" value="<%=ine_saude%>">
+                    <input type="text" name="equipe_saude" value="<%=equipe_saude%>">
+                    <button type="submit">
+                        <img src="/img/iconesMenu/info.png" alt="ícones">
+                        <p>INFORMAÇÕES</p>
+                    </button>
+                </form>
+
+                <form class="card_menuCidadao" action="/inform_alerta_saude" method="POST">                   
+                    <input type="text" name="nome_saude" value="<%=nome_saude%>">
+                    <input type="text" name="cpf_saude" value="<%=cpf_saude%>">
+                    <input type="text" name="ine_saude" value="<%=ine_saude%>">
+                    <input type="text" name="equipe_saude" value="<%=equipe_saude%>">
+                    <button type="submit">
+                        <img src="/img/iconesMenu/alerta.png" alt="ícones">
+                        <p>ALERTA ARBOVIROSES</p>
+                    </button>               
+                </form>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>
+
+<%- include('../layouts/footer') %>

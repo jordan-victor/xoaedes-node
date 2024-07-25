@@ -26,7 +26,7 @@ inputName.addEventListener('input', ()=>{
   if (Number(nome_cidadao.length) > 0 && resValidaCPF == "true"){
     document.getElementById("nome_cidadaoS").setAttribute("name", "nome_cidadao ")   
     document.getElementById("form_cidadaoS").setAttribute("action", "/checklist_saude")
-    document.getElementById("form_cidadaoS").setAttribute("method", "GET")
+    document.getElementById("form_cidadaoS").setAttribute("method", "POST")
     validaDados = "valido"//--------------
     document.getElementById("cpf_statusS").innerHTML = "Dados completos <i class='fa-solid fa-check'></i>"//----------
   }
@@ -104,7 +104,7 @@ const inputCPF = document.getElementById("cpf_cidadaoS").addEventListener('input
     //falta colocar o prevent defalt
     document.getElementById("nome_cidadaoS").setAttribute("name", "nome")   
     document.getElementById("form_cidadaoS").setAttribute("action", "/checklist_saude")
-    document.getElementById("form_cidadaoS").setAttribute("method", "GET")
+    document.getElementById("form_cidadaoS").setAttribute("method", "POST")
     validaDados = "valido"//--------------
     document.getElementById("cpf_statusS").innerHTML = "Dados completos <i class='fa-solid fa-check'></i>"//----------
   }

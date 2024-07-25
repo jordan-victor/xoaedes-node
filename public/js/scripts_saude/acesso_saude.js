@@ -2102,7 +2102,7 @@ ineInput.addEventListener('input', ()=>{
   if (Number(cpf_saude.length) > 0 && resValidaCPF == "true" && ineStatus.innerHTML != ""){
     validacao = "valido"
     document.getElementById("form_saude").setAttribute("action", "/ir_menu_saude")
-    document.getElementById("form_saude").setAttribute("method", "GET")
+    document.getElementById("form_saude").setAttribute("method", "POST")
     prosseguir.innerHTML = "sim"
   }
   if (validacao == "invalido"){
@@ -2182,7 +2182,7 @@ document.getElementById("cpf_saude").addEventListener('input', (event)=>{
   if (Number(cpf_saude.length) > 0 && resValidaCPF == "true" && ineStatus.innerHTML != ""){
     validacao = "valido"
     document.getElementById("form_saude").setAttribute("action", "/ir_menu_saude")
-    document.getElementById("form_saude").setAttribute("method", "GET")
+    document.getElementById("form_saude").setAttribute("method", "POST")
     prosseguir.innerHTML = "sim"
   }
   if (validacao == "invalido"){
