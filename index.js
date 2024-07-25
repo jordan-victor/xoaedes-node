@@ -7,6 +7,19 @@ app.use(express.static('public'))
 const bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({'extended': false}))
 
+//CONFIGURANDO O MOMENT-TIMEZONE PARA PEGAR O HORÁRIO LOCAL
+const moment = require('moment-timezone')
+
+const getLocalDateTime = ()=>{
+    const now = moment().tz('America/Manaus')
+    return{
+        date: now.format('DD-MM-YYYY'),
+        time: now.format('HH:mm')
+    }
+}
+
+
+
 
 
 
@@ -63,11 +76,11 @@ app.post('/checklist', async(req, res)=>{
     let dia = new Date().getDate()
     let mes = new Date().getMonth()
     let ano = new Date().getFullYear()
-    let data = `${dia}/${mes}/${ano}`
+    let data = getLocalDateTime().date.replace('-','/').replace('-','/')//`${dia}/${mes}/${ano}`
 
     let hora_agora = new Date().getHours()
     let minuto = new Date().getMinutes()
-    let hora = `${hora_agora}:${minuto}`
+    let hora = getLocalDateTime().time//`${hora_agora}:${minuto}`
     let nome = req.body.nome
     let cpf = req.body.cpf
     res.render('checklist',{
@@ -132,11 +145,11 @@ app.post('/checklist_escola', async(req, res)=>{
     let dia = new Date().getDate()
     let mes = new Date().getMonth()
     let ano = new Date().getFullYear()
-    let data = `${dia}/${mes}/${ano}`
+    let data = getLocalDateTime().date.replace('-','/').replace('-','/')//`${dia}/${mes}/${ano}`
 
     let hora_agora = new Date().getHours()
     let minuto = new Date().getMinutes()
-    let hora = `${hora_agora}:${minuto}`
+    let hora = getLocalDateTime().time//`${hora_agora}:${minuto}`
 
     let professor = req.body.professor;
     let inep_escola = req.body.inep_escola;
@@ -243,11 +256,11 @@ app.post('/checklist_saude',  async(req, res)=>{
     let dia = new Date().getDate()
     let mes = new Date().getMonth()
     let ano = new Date().getFullYear()
-    let data = `${dia}/${mes}/${ano}`
+    let data = getLocalDateTime().date.replace('-','/').replace('-','/')//`${dia}/${mes}/${ano}`
 
     let hora_agora = new Date().getHours()
     let minuto = new Date().getMinutes()
-    let hora = `${hora_agora}:${minuto}`
+    let hora = getLocalDateTime().time//`${hora_agora}:${minuto}`
 
     let nome = req.body.nome;
     let cpf = req.body.cpf;
