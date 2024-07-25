@@ -1,4 +1,4 @@
-<%- include('layouts/header') %>
+<%- include('../layouts/header') %>
 
 <body id="layoutPadrao">
     <!--CABEÇALHO-->
@@ -21,7 +21,7 @@
         <div>
             <img src="/img/checklist.png" alt="Checklist ícone">
         </div>
-
+    
         <article>
             <p>POR QUE REALIZAR UMA VEZ POR SEMANA?</p>
             <P>O ciclo de vida do mosquito da dengue, do ovo até a fase adulta, leva cerca de 7 a 10 dias.
@@ -29,25 +29,14 @@
                 o ciclo e evitar o nascimento de novos mosquitos.
             </P>
         </article>
-
+    
         
-        <form action="/checklist" method="POST">
-            <input type="text" name="nome" value="<%=nome%>">
-            <input type="text" name="cpf" value="<%=cpf%>">
+        <form action="/checklist_escola" method="POST">
+            <input type="text" name="nome_escola" value="<%= nome_escola %>">
+            <input type="text" name="inep_escola" value="<%= inep_escola %>">
+            <input type="text" name="professor" value="<%= professor %>">
             <button type="submit" class="formBtn">INICIAR CHECKLIST</button>
-        </form>
-
-       
-        
-        <nav class="backContainer">
-            <form action="/ir_menu_cidadao" method="POST">
-                <input type="text" name="nome_cidadao"  value="<%=nome%>">
-                <input type="text" name="cpf_cidadao" value="<%=cpf%>">
-                <button type="submit">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </buton> 
-            </form>  
-        </nav>
+        </form>       
     </main>
 
 
@@ -62,4 +51,4 @@
     </footer>
 </body>
 
-<%- include('layouts/footer') %>
+<%- include('../layouts/footer') %>

@@ -98,9 +98,59 @@ app.post('/menu_escola', async(req, res)=>{
     res.render('escola/menu_escola',{
         nome_escola: nome_escola,
         inep_escola: inep_escola,
-        professor:professor    
+        professor: professor    
     })
 })
+
+app.post('/inform_escola', async(req, res)=>{
+    let professor = req.body.professor;
+    let inep_escola = req.body.inep_escola;
+    let nome_escola = req.body.nome_escola;
+    res.render('escola/inform_escola',{
+        nome_escola: nome_escola,
+        inep_escola: inep_escola,
+        professor: professor 
+    })
+})
+
+app.post('/historico_escola', async(req, res)=>{
+    let professor = req.body.professor;
+    let inep_escola = req.body.inep_escola;
+    let nome_escola = req.body.nome_escola;
+    res.render('escola/historico_escola',{
+        nome_escola: nome_escola,
+        inep_escola: inep_escola,
+        professor: professor 
+    })
+})
+
+app.post('/informacoes_escola', async(req, res)=>{
+    res.render('escola/informacoes_escola')
+})
+
+app.post('/checklist_escola', async(req, res)=>{
+    let dia = new Date().getDate()
+    let mes = new Date().getMonth()
+    let ano = new Date().getFullYear()
+    let data = `${dia}/${mes}/${ano}`
+
+    let hora_agora = new Date().getHours()
+    let minuto = new Date().getMinutes()
+    let hora = `${hora_agora}:${minuto}`
+
+    let professor = req.body.professor;
+    let inep_escola = req.body.inep_escola;
+    let nome_escola = req.body.nome_escola;
+    res.render('escola/checklist_escola',{
+        data:data,
+        hora:hora,
+        nome_escola: nome_escola,
+        inep_escola: inep_escola,
+        professor: professor
+    })
+})
+
+
 
 
 app.listen(port)

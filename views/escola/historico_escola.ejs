@@ -1,0 +1,71 @@
+<%- include('../layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>HISTÓRICO DE AÇÕES</h1>
+            </div>
+            <p><%= nome_escola %></p>
+        </header>
+
+
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+
+
+        <!--Histórico-->
+        <main class="historico">
+            <div class="historico_container">
+                <div class="id_historico"><p id="inep_historico"></p></div>
+                <input type="text" value="<%= nome_escola %>" id="nome_escola" style="display: none!important;" readonly>
+                <input type="text" value="<%= inep_escola %>" id="inep_escola" style="display: none!important;" readonly>
+                <div class="containerTableEscola">            
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>N°</th>
+                                <th>PROFESSOR(A)</th>
+                                <th>DATA/HORA</th>
+                                <th><img src="/img/imgs_checklist/img1.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img2.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img3.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img4.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img5.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img6.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img7.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img8.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img9.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img10.jpg" alt="" width="20px"></th>
+                                <th><img src="/img/imgs_checklist/img11.jpg" alt="" width="20px"></th>
+                            </tr>
+                        </thead>
+        
+                        <tbody id="corpo_historico">
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+
+
+
+   
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>
+
+<script type="module" src="/js/scripts_escola/historico_escola.js"></script>
+<%- include('../layouts/footer') %>
