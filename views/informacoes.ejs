@@ -1,0 +1,77 @@
+<%- include('layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>INFORMAÇÕES</h1>
+            </div>
+            <p>Sintomas e prevenção</p>
+        </header>
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <p id="contador" style="display: none!important">0</p>
+    <main id="informacoes">
+        <a href="https://www.manaus.am.gov.br/semsa/vigilancia/boletim-arboviroses-2024/" target="_blanck">Informe epidemiológico</a>
+   
+      <!---------------------SLIDE DE IMAGENS----------------->
+        <div id="cont" style="display:none!important">0</div>
+
+        <div id="slide" style="overflow:hidden;">
+            <div id="backContainer">
+                <div id="back" onclick="backImg()">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+            </div>
+            
+            <div id="nextContainer">
+                <div id="next" onclick="nextImg()">
+                    <i class="fa-solid fa-chevron-right" ></i>
+                </div>
+            </div>
+
+            <div id="imgs" style="display:flex;"></div>
+        </div> 
+
+        <!--INDICADORES DE SLIDE-->
+        <div id="radios">
+        </div>
+        
+        
+
+        <form action="{{route('ir_menu_cidadao')}}" method="GET" class="formVoltar" style="display: none;">
+            <input type="text" name="nome_cidadao"  value="{{$nome}}">
+            <input type="text" name="cpf_cidadao" value="{{$cpf}}">
+            <button type="submit" class="voltarBtn">VOLTAR</button>
+        </form>
+        
+        <nav class="backContainer">
+            <form action="{{route('ir_menu_cidadao')}}" method="GET">
+                <input type="text" name="nome_cidadao" value="{{$nome}}" style="display: none!important" readonly>
+                <input type="text" name="cpf_cidadao" value="{{$cpf}}" style="display: none!important" readonly>
+                <button type="submit">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </buton> 
+            </form>  
+        </nav>
+    </main>
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>   
+<%- include('layouts/footer') %>

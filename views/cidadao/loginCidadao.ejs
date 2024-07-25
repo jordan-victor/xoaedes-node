@@ -1,0 +1,48 @@
+<%- include('../layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>BEM-VINDO</h1>
+            </div>
+            <p>Entre com seus dados</p>
+        </header>
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <main id="cadastroCidadao">
+        <section class="img_cadastro">
+            <div> <img src="/img/logo.png" alt="Logo"> </div>
+        </section>
+    
+        <section class="form_cadastro">
+            <form id="form_cidadao">
+                <img src="/img/tipoUsuarios/cidadao.png" alt="Cidadão" width="75px">
+                <p id="cpf_status"></p>          
+                <input type="text" id="nome_cidadao" placeholder="Nome" required>
+                <input type="text" name="cpf_cidadao" id="cpf_cidadao" placeholder="CPF" maxlength="14" required>
+                <button class="formBtn" id="btn_cadastroCid" onclick="acessar()">ACESSAR</button><!---->
+            </form>
+        </section>
+    </main>
+
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>   
+<%- include('../layouts/footer') %>

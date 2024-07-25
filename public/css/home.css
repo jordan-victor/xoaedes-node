@@ -1,0 +1,103 @@
+/*---------------------------------ESTILO DA PÁGINA HOME------------------------------------*/
+#home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home a{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+#home #home-cabecalho{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+#home #home-cabecalho img{
+    width: 60%;
+}
+
+#home .cards{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 18px;
+    padding: 15px;
+}
+
+#home .cards a{
+    display: flex;
+    justify-content: center;
+}
+
+#home .cards p{
+    max-width: 100px;
+    color: white!important;
+}
+
+#home .cards .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 300px;
+    height: 100px;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+    background-color: #4784e0;
+    transition: all 0.2s ease;
+}
+
+#home .card:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.13);
+}
+
+#home .cards .card .img-profissinal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75px;
+    height: 100%;
+}
+
+#home .cards .card .img-profissinal img{
+    width: 90%;
+}
+
+/*RESPONSIVIDADE DA PÁGINA HOME*/
+@media (min-width:700px){
+    #home{
+        flex-direction: row;
+        justify-content: center;
+    }
+    #home-cabecalho{
+        width: 50%;
+    }
+    #home-cabecalho{
+        max-width: 500px;
+    }
+    #home #home-cabecalho img{
+        width: 100%;
+    }
+
+    #home .cards{
+        max-width: 400px;
+    }
+
+    #home .cards .card{
+        max-width: 100%;
+    }
+}

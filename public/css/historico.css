@@ -1,0 +1,160 @@
+.historico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    width: 100%;
+}
+.historico_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.historico .historico_container > div{
+    padding-bottom: 5px;
+    padding-left: 5px;
+    width: 100%;
+}
+
+.pesquisarContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+}
+.pesquisarContainer .lupa{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0084ff;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    border-radius: 10px;    
+}
+.lupa_container{
+    width: 70px;
+    height: 50px;
+    position: relative;
+    transition: all 0.1s ease;
+}
+.lupa_container:active{
+    transform: scale(0.93);
+}
+.desable_btn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color:transparent;
+    display: none;
+}
+
+.historico input{
+    border: 1px solid #cccccc;
+    background-color: #f4f4f4;
+    height: 50px;
+    width: 225px;  
+    border-radius: 10px;
+    padding-right: 10px;
+    outline: none;
+    padding-left: 10px;   
+}
+.historico .pesquisarContainer input:focus{
+    box-shadow: 0px 0px 6px #0084ff;
+    border: none
+}
+
+.id_historico{
+    width:100%;
+    display: flex;
+}
+.id_historico p{
+    padding: 5px;
+    background-color:#f4f4f4;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+thead tr {
+    background-color: #0084ff;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 12px;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+tbody tr td{
+    border: 1px solid rgb(93, 93, 93);
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+table th img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+table tbody td i{
+    color: green;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+.containerTable{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:1054px){
+    .containerTable{
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+}
+
+
+.containerTableEscola{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+@media(max-width:1213px){
+    .containerTableEscola{
+        overflow-x: scroll;
+        justify-content: flex-start;
+    }
+}

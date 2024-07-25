@@ -1,0 +1,61 @@
+<%- include('layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-itens:center;" id="titulo_cotainer">
+                <h1>Olá, vamos ao combate!</h1>
+            </div>
+        </header>
+    </div>
+    
+    
+
+
+
+    <!--PRINCIPAL-->
+    <main id="home">
+        <div id="home-cabecalho">
+            <img src="/img/logo.png" alt="Logo">    
+        </div>
+
+
+
+        <div class="cards">
+            <a href="/termo_cidadao">
+                <div class="card">
+                    <div class="img-profissinal"> <img src="/img/tipoUsuarios/cidadao.png" alt="Profissional da Escola"> </div>
+                    <p>CIDADÃO</p>
+                </div>
+            </a>
+
+            <a href="{{route('termo_escola')}}">
+                <div class="card">
+                    <div class="img-profissinal"> <img src="/img/tipoUsuarios/prof-escola.png" alt="Profissional da Escola"> </div>
+                    <P>PROFISSIONAL DA ESCOLA</P>
+                </div> 
+            </a>
+            
+            <a href="{{route('termo_saude')}}">
+                <div class="card">
+                    <div class="img-profissinal"> <img src="/img/tipoUsuarios/prof-saude.png" alt="Profissional da Escola"> </div>
+                    <P>PROFISSIONAL DE SAÚDE</P>
+                </div> 
+            </a>
+            
+        </div>    
+    </main>
+
+
+
+
+
+    <!--FOOTER-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>
+<%- include('layouts/footer') %>

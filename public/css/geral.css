@@ -1,0 +1,82 @@
+/*ESSE ESTILO AFETARÁ TODAS AS PÁGINAS*/
+main{
+    max-width: 800px;
+}
+
+.voltar{
+    font-size: 25px;
+    padding-left: 20px;
+}
+.voltar a{
+    text-decoration: none;
+}
+.voltar a i{
+    color: #0084ff;
+}
+.voltar a i:hover{
+    cursor: pointer;
+}
+
+/*HOME*/
+#home .cards p{
+    color: rgb(80, 80, 80);
+    line-height: 22px;
+}
+
+/*MENUS CIDADÃO, PROF ESCOLA E PROF SAÚDE*/
+.cards_menuCidadao p{
+    color: rgb(80, 80, 80);
+}
+
+/*INFORMES*/
+#inform article p{
+    color: rgb(80, 80, 80)
+}
+#inform_alerta article p{
+    color: rgb(80, 80, 80)
+}
+
+/*ALERTA DENGUE*/
+#alerta #sintomas label{
+    color: rgb(80, 80, 80);
+}
+#alerta strong{
+    color: rgb(80, 80, 80);
+}
+
+/*HISTÓRICOS*/
+.historico p, h3{
+    color: rgb(80, 80, 80);
+}
+
+/*CPF STATUS*/
+.cpf_status{
+    color: rgb(107, 173, 108);
+    font-size: 15px;
+}
+
+input{
+    font-size: 16px;
+}
+
+/*AFETARÁ TODOS OS BOTÕES DE PROSSEGUIR E DE VOLTAR E SETAS DE VOLTAR QUE SERÃO ESCONDIDAS, POR ENQUANTO :(*/
+.formBtn{
+    background-color: #00bf04!important;
+}
+.voltarBtn{
+    background-color: #ff340b!important;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    width: 300px;  
+}
+.formVoltar input{
+    display: none!important;
+}
+/*SETA VOLTAR*/
+.backContainer form button i{
+    display: none;
+}

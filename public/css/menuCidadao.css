@@ -1,0 +1,101 @@
+#menu_cidadao{
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards_menuCidadao{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    padding-bottom: 8px;
+    max-width: 323px;
+}
+@media(max-width:322px){
+    .cards_menuCidadao{
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.cards_menuCidadao input{
+    display: none;
+}
+
+.card_menuCidadao{
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 150px;
+    height: 170px;
+    border-radius: 20px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+    transition: all 0.2s ease;
+}
+.card_menuCidadao button{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.card_menuCidadao:hover{
+    transform: scale(1.02);
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.13);
+}
+
+.card_menuCidadao img{
+    width: 85px;
+}
+
+.cards_menuCidadao a{
+    text-decoration: none;
+    color: black;
+}
+
+.card_historico p{
+    line-height: 10px;
+}
+.card_menuCidadao p{
+    line-height: 20px;
+}
+
+
+
+/*ESTILO DAS INFORMAÇÕES ADICIONAIS NO MENU*/
+.infMenu{
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+}
+.infMenu p{
+    text-align: center!important;
+    white-space: nowrap;
+    width: 100vw; 
+}
+@media(min-width:700px){
+    .infMenu{
+        overflow: hidden;
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+    }
+    .infMenu p{
+        text-align: center!important;
+        white-space: none;
+        width: 100vw; 
+    }   
+}

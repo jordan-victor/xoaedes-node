@@ -1,0 +1,54 @@
+#inform{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#inform input{
+    display: none;
+}
+
+#inform div{
+    width: 200px;
+    height: 200px;
+    background-color: #bddfff;
+    padding-left: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+#inform div img{
+    width: 100%;
+    position: relative;
+    left: 15px;
+    bottom: 5px;
+}
+
+#inform article{
+    max-width: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#inform article p{
+    text-align: justify;
+}
+
+#inform article > :first-child{
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#inform button{
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0084ff;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    width: 300px;
+    cursor: pointer;
+}

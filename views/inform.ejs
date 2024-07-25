@@ -1,0 +1,65 @@
+<%- include('layouts/header') %>
+
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-itens:center;" id="titulo_cotainer">
+                <h1>O QUE É O CHECKLIST?</h1>
+            </div>
+        </header>
+
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <main id="inform">
+        <div>
+            <img src="/img/checklist.png" alt="Checklist ícone">
+        </div>
+
+        <article>
+            <p>POR QUE REALIZAR UMA VEZ POR SEMANA?</p>
+            <P>O ciclo de vida do mosquito da dengue, do ovo até a fase adulta, leva cerca de 7 a 10 dias.
+                Se a verificação e eliminação dos criadouros for realizada uma vez por semana, podemos interromper
+                o ciclo e evitar o nascimento de novos mosquitos.
+            </P>
+        </article>
+
+        
+        <form action="/checklist" method="POST">
+            <input type="text" name="nome" value="<%=nome%>">
+            <input type="text" name="cpf" value="<%=cpf%>">
+            <button type="submit" class="formBtn">INICIAR CHECKLIST</button>
+        </form>
+
+       
+        
+        <nav class="backContainer">
+            <form action="/ir_menu_cidadao" method="POST">
+                <input type="text" name="nome_cidadao"  value="<%=nome%>">
+                <input type="text" name="cpf_cidadao" value="<%=cpf%>">
+                <button type="submit">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </buton> 
+            </form>  
+        </nav>
+    </main>
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>
+
+<%- include('layouts/footer') %>

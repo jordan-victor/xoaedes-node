@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklst</title>
+
+    <!--IMPORTANDO FONTE POPPINS-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.5.2/css/all.css"><!--IMPORTANDO ÍCONES-->
+    <link rel="stylesheet" href="/css/checklist.css"><!--CSS CHECKLIST-->
+</head>
+
+<body id="checklist" onload="localizacao()" id="corpo">
+    <div>
+        <header>
+            <div style="display:flex; gap:15px; justify-content:center; align-items:center;">
+                <h1>CHECKLIST</h1>
+            </div>
+            <p>Realizado em: <%=data%> às <%=hora%></p>    
+        </header>    
+        <div id="voltarCheck"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+    
+
+    <div id="msg" style="position:fixed;">
+        <div id="parabens">
+            <h2>PARABÉNS!</h2>
+            <img src="/img/success.png" alt="Mensagem de sucesso">
+            <p>Checklist concluído</p>
+        </div>
+    </div>
+
+
+
+    <!--LISTA DE ITENS DO CHECKLIST-->
+    <div id="checks">
+        <div class="check" id="chek1">
+            <img src="/img/imgs_checklist/img1.jpg" alt="" class="imgChek">
+            <p>Caixa d' água vedadas</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck1" value="Caixa d' água ok" onchange="checked1()">
+                <label for="ck1" id="label1"><i class="fa-regular fa-square" name="square" id="square1"></i></label>                 
+            </div>  
+        </div>
+
+        <div class="check" id="chek2">
+            <img src="/img/imgs_checklist/img2.jpg" alt=""class="imgChek">
+            <p>Calhas totalmente limpas</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck2" value="Calhas ok" onchange="checked2()">
+                <label for="ck2" id="label2"><i class="fa-regular fa-square" class="square" name="square" id="square2"></i></label>              
+            </div>  
+        </div>
+
+        <div class="check" id="chek3">
+            <img src="/img/imgs_checklist/img3.jpg" alt=""class="imgChek">
+            <p>Tambores fechados</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck3" value="Tambores ok" onchange="checked3()">
+                <label for="ck3" id="label3"><i class="fa-regular fa-square" class="square" name="square" id="square3"></i></label>              
+            </div>  
+        </div>
+
+        <div class="check" id="chek4">
+            <img src="/img/imgs_checklist/img4.jpg" alt="" class="imgChek">
+            <p>Pneus sem água por dentro</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck4" value="Pneus ok" onchange="checked4()">
+                <label for="ck4" id="label4"><i class="fa-regular fa-square" class="square" name="square" id="square4"></i></label>               
+            </div>  
+        </div>
+
+        <div class="check" id="chek5">
+            <img src="/img/imgs_checklist/img5.jpg" alt="" class="imgChek">
+            <p>Baldes virados para baixo</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck5" value="Baldes ok" onchange="checked5()">
+                <label for="ck5" id="label5"><i class="fa-regular fa-square" class="square" name="square" id="square5"></i></label>                
+            </div>  
+        </div>
+
+        <div class="check" id="chek6">
+            <img src="/img/imgs_checklist/img6.jpg" alt="" class="imgChek">
+            <p>Bandejas de ar limpas e sem água</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck6" value="Bandejas-ar ok" onchange="checked6()">
+                <label for="ck6" id="label6"><i class="fa-regular fa-square" class="square" name="square" id="square6"></i></label>               
+            </div>  
+        </div>
+
+        <div class="check" id="chek7">
+            <img src="/img/imgs_checklist/img7.jpg" alt="" class="imgChek">
+            <p>Bandejas da geladeira sem água</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck7" value="Bandejas-geladeira ok" onchange="checked7()">
+                <label for="ck7" id="label7"><i class="fa-regular fa-square" class="square" name="square" id="square7"></i></label>               
+            </div>  
+        </div>
+
+        <div class="check" id="chek8">
+            <img src="/img/imgs_checklist/img8.jpg" alt="" class="imgChek">
+            <p>Pratos de plantas com areia</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck8" value="Pratos-planta ok" onchange="checked8()">
+                <label for="ck8" id="label8"><i class="fa-regular fa-square" class="square" name="square" id="square8"></i></label>                
+            </div>  
+        </div>
+
+        <div class="check" id="chek9">
+            <img src="/img/imgs_checklist/img9.jpg" alt="" class="imgChek">
+            <p>Vaso sanitário sem uso fechado</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck9" value="Vaso sanitário ok" onchange="checked9()">
+                <label for="ck9" id="label9"><i class="fa-regular fa-square" class="square" name="square" id="square9"></i></label>                
+            </div>  
+        </div>
+
+        <div class="check" id="chek10">
+            <img src="/img/imgs_checklist/img10.jpg" alt="" class="imgChek">
+            <p>Piscina e fonte sempre tratados</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck10" value="Piscina e fonte ok" onchange="checked10()">
+                <label for="ck10" id="label10"><i class="fa-regular fa-square" class="square" name="square" id="square10"></i></label>               
+            </div>  
+        </div>
+
+        <div class="check" id="chek11">
+            <img src="/img/imgs_checklist/img11.jpg" alt="" class="imgChek">
+            <p>Ralos limpos e com tela</p>
+            <div>
+                <input type="checkbox" name="check" class="checkbox" id="ck11" value="Ralos ok" onchange="checked11()">
+                <label for="ck11" id="label11"><i class="fa-regular fa-square" class="square" name="square" id="square11"></i></label>
+            </div>  
+        </div>
+    </div>
+
+
+
+
+
+
+    <main>
+        <form  id="formChecklist" action="/ir_menu_cidadao" method="POST">
+            <input type="text" name="nome" id="nome" value="<%=nome%>">
+            <input type="text" name="cpf" id="cpf" value="<%=cpf%>">
+            <input type="text" name="latitude" id="latitude" value=""><!--{{$latitude}}-->
+            <input type="text" name="longitude" id="longitude" value=""><!--{{$longitude}}-->
+            <input type="text" name="data" id="data" value="<%=data%> <%=hora%>">
+            <!--Values que serão retornados de volta para o menu-->
+            <input type="text" name="nome_cidadao"  value="<%=nome%>">
+            <input type="text" name="cpf_cidadao" value="<%=cpf%>">
+              
+            <button type="button" class="formBtn" id="btn_finalizar">FINALIZAR</button>
+        </form>
+
+
+
+
+
+        
+        
+       
+
+        
+    </main>
+
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura">
+            <p>Xô Aedes</p>
+        </div>
+    </footer>
+
+
+    <script src="/js/checklist.js"></script>
+    <script src="/js/finalizar.js"></script>
+    <script src="/js/marcar.js"></script>
+   
+
+</body>
+</html>

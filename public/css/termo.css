@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, Arial;
+    text-align: justify;
+}
+
+body{
+    background-image: url("/img/bgAedes.jpg");
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.voltar{
+    width: 100%;
+    display: flex;
+    padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.voltar i{
+    font-size: 25px;
+    color: #0084ff;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+header{
+    padding: 0px 0px 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo{
+    text-align: center;
+    line-height: 25px;
+    font-size: 18px; 
+}
+
+#titulo, p, li, h1{
+    color: rgb(41, 41, 41);
+}
+
+article{
+    max-width: 700px;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 55vh;
+    overflow-y: scroll;
+    background-color: transparent;
+}
+
+article p,ul{
+    margin-bottom: 10px;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+form{
+    width: 100%;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ form > div{
+    margin-bottom: 5px;
+ }
+
+form div label{
+    margin-bottom: 5px;
+}
+
+button{
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0084ff;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    width: 300px;
+    text-align: center;
+    margin-top: 0;
+}
+.desbleButton{
+    pointer-events: none;
+    opacity: 0.5;
+}
+button:hover{
+    transform: scale(1.01);
+}
+
+@media(min-width:700px){
+    form{
+        width: 700px;
+    }
+    .voltar{
+        width: 700px;
+    }
+}
+
+/*AFETARÁ TODOS OS BOTÕES DE PROSSEGUIR E SETAS DOS CHECKLISTS*/
+#button{
+    background-color: #00bf04!important;
+}

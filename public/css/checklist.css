@@ -1,0 +1,368 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, Arial;
+}
+
+h1{
+    font-size: 25px;
+}
+
+#msg{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    margin:  auto;
+    z-index: 200;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: rgb(100, 167, 100);
+   display: none;
+   background-color: white;
+}
+#msg div{
+    width: 350px;
+    height: 350px;
+    background-color: rgb(231, 255, 235);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.281);
+    position: relative;
+    bottom: 20px;
+    transition: all 1s ease;
+}
+#msg div img{
+    width: 200px;
+}
+#msg div p{
+    font-size: 25px;
+}
+#msg div h2{
+    font-size: 30px;
+}
+
+#checklist{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-image: url("/img/bgAedes.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#checklist main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#checklist input[type="text"]{
+    display: none;
+}
+
+#checklist header{
+    width: 100%;
+    height: 90px;
+    background-color: transparent;/*azul*/
+    color: black;/*branco*/
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/*--------------------------------*/
+#voltarCheck{
+    font-size: 25px;
+    margin-top: 15px;
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+@media(min-width:700px){
+    #voltarCheck{
+        width: 700px;
+    }
+}   
+#voltarCheck a{
+    text-decoration: none;
+}
+#voltarCheck a i{
+    color: #0084ff;
+}
+#voltarCheck a i:hover{
+    cursor: pointer;
+}
+
+
+#checklist main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#checklist textarea{
+    border: none;
+    outline: none;
+    height: 60px;
+    width: 300px;
+}
+
+#formCheck{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+#formCheck #ok{
+    font-size: 66px;
+    color: green;
+}
+#checklist textarea:focus{
+    box-shadow: 0px 0px 6px #0084ff;
+}
+
+#formChecklist{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#checklist footer{
+    width: 100%;
+    min-height: 90px;
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 10px;
+}
+#checklist footer div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#checklist footer div p{
+    color: black;
+    margin-top: 15px;
+}
+#checklist footer img{
+    width: 300px;
+}
+
+#lista{
+    min-width: 380px;
+    height: 50vh;
+    overflow-y: scroll;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#lista img{
+    width: 30px;
+}
+
+.container{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#lista .container .apagar{
+    cursor: pointer;
+}
+
+#lista .container p{
+    max-width: 400px;
+    overflow-x: scroll;
+}
+
+body script{
+    display: none;
+}
+
+
+.formBtn{
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0084ff;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    width: 300px;
+}
+.formBtn:hover{
+    transform: scale(1.01);
+}
+
+/*----------------------------------------------*/
+#anotacoes{
+    display: none;
+}
+
+#checks{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#checks input{
+   display: none;
+}
+#checks #marcado1, 
+#marcado2,
+#marcado3,
+#marcado4,
+#marcado5,
+#marcado6,
+#marcado7,
+#marcado8,
+#marcado9,
+#marcado10,
+#marcado11{
+    display: none;
+}
+
+#checks .check{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    padding-right: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    overflow: hidden;
+}
+#checks img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+#checks .check i{
+    font-size: 40px;
+}
+
+#chek1{
+    background-color: #00bcd4; 
+}
+#chek2{
+    background-color: #ff5722; 
+}
+#chek3{
+    background-color: #ff9800;
+}
+#chek4{
+    background-color: #673ab7;
+}
+#chek5{
+    background-color: #8bc34a;
+}
+#chek6{
+    background-color: #e91e63;
+}
+#chek7{
+    background-color: #009688;
+}
+#chek8{
+    background-color: #9c27b0;
+}
+#chek9{
+    background-color: #3f51b5;
+}
+#chek10{
+    background-color: #2196f3;
+}
+#chek11{
+    background-color: #4caf50;
+}
+
+
+/*ESTILO DA SETA CHECKLIST*/
+#checklist nav{
+    width: 100%;
+    margin-top: 15px;
+}
+#checklist nav i{
+    font-size: 30px;
+}
+#checklist nav form button{
+    display: flex;
+    gap: 5px;
+    background-color: transparent;
+    height: 100%;
+    border: none;
+    outline: none;
+    width: 85px;
+    padding-left: 15px;
+}
+#checklist nav form button i{
+    color: #0084ff; 
+}
+
+
+@media(min-width:700px){
+    .check{
+        max-width: 700px;
+    }
+    #checklist nav{
+        max-width: 700px;
+    }
+}
+
+/*AFETARÁ TODOS OS BOTÕES DE PROSSEGUIR E SETAS DOS CHECKLISTS*/
+.formBtn{
+    background-color: #00bf04!important;
+}
+.voltarBtn{
+    background-color: #ff340b!important;
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    width: 300px;  
+}
+.formVoltar input{
+    display: none;
+}
+
+.backContainer form button i{
+    display: none;
+}

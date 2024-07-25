@@ -1,0 +1,90 @@
+#cadastroEscola{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px;
+    min-height: 100%;
+    gap: 20px;
+}
+
+
+#cadastroEscola .img_cadastro{
+    display: flex;
+    justify-content: center;
+}
+#cadastroEscola .img_cadastro div{
+    width: 250px;
+}
+#cadastroEscola .img_cadastro div img{
+    width: 100%;
+}
+
+.form_cadastro form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: rgb(247, 247, 247);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.13);
+    padding: 20px;
+    border-radius: 20px;
+}
+.form_cadastro form img{
+   margin-bottom: 20px; 
+}
+.form_cadastro form input{
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    width: 300px;
+    outline: none;
+}
+.form_cadastro form input:focus{
+    box-shadow: 0px 0px 6px #0084ff;
+}
+
+.formBtn{
+    height: 50px;
+    border-radius: 20px;
+    border: none;
+    background-color: #0084ff;
+    color: white;
+    margin-top: 20px;
+    transition: all 0.4s ease;
+    width: 300px;
+}
+.formBtn:hover{
+    transform: scale(1.01);
+}
+
+#cadastroEscola #nome_escola{
+    display: none;
+}
+
+/*responsividade*/
+@media (min-width:700px){
+    #cadastroEscola{
+        flex-direction: row;
+    }
+}
+
+#form_escola div p{
+    width: 300px;
+    text-align: left;
+    color: rgb(108, 108, 108);
+    font-size: 15px;
+    margin-bottom: 4px;
+}
+
+#form_escola div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
