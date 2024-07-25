@@ -189,6 +189,19 @@ app.post('/login_saude_cidadao', async(req, res)=>{
     })
 })
 
+app.post('/informacoes_saude', async(req, res)=>{
+    let equipe_saude = req.body.equipe_saude;
+    let nome_saude = req.body.nome_saude;
+    let ine_saude = req.body.ine_saude;
+    let cpf_saude = req.body.cpf_saude;
+    res.render('saude/informacoes_saude',{
+        equipe_saude: equipe_saude,
+        nome_saude: nome_saude,
+        ine_saude: ine_saude,
+        cpf_saude: cpf_saude
+    })
+})
+
 app.post('/historico_saude', async(req, res)=>{
     let equipe_saude = req.body.equipe_saude;
     let nome_saude = req.body.nome_saude;
@@ -231,5 +244,6 @@ app.post('/checklist_saude',  async(req, res)=>{
 })
 
 
+//falta a rota do alerta
 
 app.listen(port)

@@ -1,0 +1,66 @@
+<%- include('../layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>O QUE É O "ALERTA ARBOVIROSES?</h1>
+            </div>
+            <div id="container_msg_alerta">
+                <p id="msg_alerta" class="msg_alerta"></p>
+                <div class="container_msg_close"><i class="fa-solid fa-xmark" id="close_msg" onclick="close_msg()"></i></div>
+             </div>
+        </header>
+
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+
+
+
+
+
+        <!--MAIN-->
+        <main id="inform_alerta">
+            <div>
+                <img src="/img/alerta.png" alt="Checklist ícone">
+            </div>
+            
+           
+            <article>
+                <P>
+                    A finalidade deste alerta é informar às Unidades de Saúde a ocorrência de possíveis
+                    casos de Arboviroses na cidade de Manaus. Servirá como ferramenta para direcionar as ações
+                    de intervenção de combate às Arboviroses.
+                </P>
+            </article>
+    
+            
+            <form>
+                <input type="text" id="latitude" value="">
+                <input type="text" id="longitude" value="">
+                <input type="text" name="data" value="<%=data%> <%=hora%>" id="data">
+                <input type="text" name="nome_saude" value="<%=nome_saude%" id="profissional">
+                <input type="text" name="ine_saude" value="<%= ine_saude%>" id="ine_saude">
+                <input type="text" name="cpf_saude" value="<%= cpf_saude%>" id="cpf_saude">
+                <input type="text" name="equipe_saude" value="<%= equipe_saude%>" id="equipe_saude">
+                <button type="button" id="btn_alerta" class="formBtn">ENVIAR ALERTA</button>
+            </form>
+        </main>   
+    </div>
+
+
+
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>
+
+<script src="/js/scripts_saude/alerta.js" type="module"></script>
+<%- include('../layouts/footer') %>
