@@ -2044,7 +2044,7 @@ inputInep.addEventListener('input', ()=>{
         nome_escola.innerHTML = dado_escola.escola
 
         formEscola.setAttribute("action", "/menu_escola")
-        formEscola.setAttribute("method", "GET")
+        formEscola.setAttribute("method", "POST")
 
         let inputNomeEscola = document.getElementById("nome_escola")
         inputNomeEscola.value = dado_escola.escola

@@ -1,0 +1,53 @@
+<%- include('../layouts/header') %>
+<body id="layoutPadrao">
+    <!--CABEÇALHO-->
+    <div id="cabecalho">
+        <header>
+            <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
+                <h1>ESCOLA</h1>
+            </div>
+            <p>Entre com seus dados</p>
+        </header>
+        <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
+    </div>
+
+
+
+
+
+
+    <!--PRINCIPAL-->
+    <main id="cadastroEscola">
+        <section class="img_cadastro">
+            <div> <img src="/img/logo.png" alt="Logo"> </div>
+        </section>
+    
+        <section class="form_cadastro" >
+            <form id="form_escola">
+                <img src="/img/tipoUsuarios/prof-escola.png" alt="Profissional da Escola" width="75px">
+                <div>
+                    <p id="escola"></p>
+                    <input type="text" name="nome_escola" id="nome_escola" value="" readonly>
+                    <input type="text" name="professor" id="professor" placeholder="Profissional da Escola" required>         
+                    <input type="number" name="inep_escola" id="inep_escola" maxlength="8" placeholder="INEP" required>
+                </div>
+                <button class="formBtn" id="btn_escola" onclick="acessarEscola()">ACESSAR</button>
+            </form>
+        </section>
+    
+        <script src="/js/scripts_escola/escola.js"></script>
+    </main>
+
+
+
+
+
+    <!--RODAPÉ-->
+    <footer>
+        <div>
+            <img src="/img/logo-prefeitura.png" alt="Logomarca prefeitura" width="300px" style="margin-top: 20px;">
+            <p style="margin-top: 10px; color:black;">Xô Aedes</p>
+        </div>
+    </footer>
+</body>   
+<%- include('../layouts/footer') %>

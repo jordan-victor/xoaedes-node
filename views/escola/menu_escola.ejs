@@ -5,9 +5,10 @@
     <div id="cabecalho">
         <header>
             <div style="display:flex; justify-content:center; align-items:center;" id="titulo_cotainer">
-                <h1>Olá, <%= resultado %></h1>
+                <h1>Olá, <%= nome_escola %></h1>
             </div>
-            <p>Vamos ao Combate</p> 
+
+            <p>Professor: <%= professor %></p> 
         </header>
         <div class="voltar"><a href="/"><i class="fa-solid fa-house"></i></a></div>
     </div>
@@ -17,35 +18,39 @@
 
 
     <!--PRINCIPAL-->
-    <main id="menu_cidadao">
+    <main id="menu_cidadao">        
         <div class="cards_menuCidadao">
-            <form class="card_menuCidadao" action="/inform" method="POST">                   
-                <input type="text" name="nome" value="<%= resultado %>">
-                <input type="text" name="cpf" value="<%= cpf_cid %>">
+            <form class="card_menuCidadao" action="/inform_escola" method="POST">                 
+                <input type="text" name="professor" value="<%= professor %>">
+                <input type="text" name="nome_escola" value="<%= nome_escola %>">
+                <input type="text" name="inep_escola" value="<%= inep_escola %>">
                 <button type="submit">
                     <img src="/img/iconesMenu/checked.png" alt="ícones">
                     <p>CHECKLIST</p>
                 </button>               
-            </form>           
-
+            </form>
            
-            <form class="card_menuCidadao" action="/historico_cidadao" method="POST">
-                <input type="text" name="nome" value="<%= resultado %>">
-                <input type="text" name="cpf" value="<%= cpf_cid %>">
+
+            <form class="card_menuCidadao" action="/historico_escola" method="POST">
+                <input type="text" name="professor" value="<%= professor %>">
+                <input type="text" name="nome_escola" value="<%= nome_escola %>">
+                <input type="text" name="inep_escola" value="<%= inep_escola %>">
                 <button type="submit">
                     <img src="/img/iconesMenu/historico.png" alt="ícones">
                     <p>HISTÓRICO CHECKLIST</p>
                 </button>
             </form>
 
-            <form class="card_menuCidadao" action="/informacoes" method="POST">
-                <input type="text" name="nome" value="<%= resultado %>">
-                <input type="text" name="cpf" value="<%= cpf_cid %>">
+            <form class="card_menuCidadao" action="/informacoes_escola" method="POST">
+                <input type="text" name="professor" value="<%= professor %>">
+                <input type="text" name="nome_escola" value="<%= nome_escola %>">
+                <input type="text" name="inep_escola" value="<%= inep_escola %>">
                 <button type="submit">
                     <img src="/img/iconesMenu/info.png" alt="ícones">
                     <p>INFORMAÇÕES</p>
                 </button>
             </form>
+
         </div>
     </main>
 

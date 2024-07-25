@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({'extended': false}))
 
 
 
-
+//HOME
 app.get('/', async(req, res)=>{
     res.render('home')
 })
@@ -79,6 +79,28 @@ app.post('/checklist', async(req, res)=>{
 })
 
 
+
+
+
+//ESCOLA
+app.get('/termo_escola', async(req , res)=>{
+    res.render('escola/termo_escola')
+})
+
+app.post('/login_escola', async(req, res)=>{
+    res.render('escola/login_escola')
+})
+
+app.post('/menu_escola', async(req, res)=>{
+    let professor = req.body.professor;
+    let inep_escola = req.body.inep_escola;
+    let nome_escola = req.body.nome_escola;
+    res.render('escola/menu_escola',{
+        nome_escola: nome_escola,
+        inep_escola: inep_escola,
+        professor:professor    
+    })
+})
 
 
 app.listen(port)

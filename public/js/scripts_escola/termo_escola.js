@@ -5,7 +5,7 @@ checkTermo.addEventListener('change',()=>{
     let form = document.getElementById("form")
     
     if(box.checked){  
-        form.setAttribute("method", "GET")
+        form.setAttribute("method", "POST")
         form.setAttribute("action", "/login_escola")
         button.removeAttribute("class")
     }
