@@ -2264,11 +2264,19 @@ document.getElementById("cpf_saude").addEventListener('input',function(){
 
 
 
-//MENSAGEM DE ERRO
+//MENSAGEM DE ERRO----------------------------------
 function acessoSaude(){
   let ine_status = document.getElementById("ine_status")
   let prosseguir = document.getElementById("prosseguir")
   if(ine_status.innerHTML == "" || prosseguir.innerHTML == "nao"){
+    let form_cadastro = document.getElementById("form_saude")
+    form_cadastro.addEventListener('submit', (event)=>{
+      event.preventDefault()
+    })
     alert("Dados inválidos")
+  }
+  else{
+    let submitForm = document.getElementById("form_saude")
+    submitForm.submit()
   }
 }

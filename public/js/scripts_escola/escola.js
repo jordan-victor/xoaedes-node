@@ -2064,9 +2064,18 @@ inputInep.addEventListener('input', ()=>{
 
 
 
+//MENSAGEM DE ERRO----------------------------------
 function acessarEscola(){
   let escola = document.getElementById("escola")
   if (escola.innerHTML == ""){
+    let form_cadastro = document.getElementById("form_escola")
+    form_cadastro.addEventListener('submit', (event)=>{
+      event.preventDefault()
+    })
     alert("Dados inválidos")
+  }
+  else{
+    let submitForm = document.getElementById("form_escola")
+    submitForm.submit()
   }
 }

@@ -233,10 +233,18 @@ const inputCPF = document.getElementById("cpf_cidadao").addEventListener('input'
 
 
 
-//MENSAGEM DE ERRO
+//MENSAGEM DE ERRO-----------------------------------------------------------------------
 function acessar(){
   let cpf_status = document.getElementById("cpf_status")
   if(cpf_status.innerHTML == ""){
+    let form_cadastro = document.getElementById("form_cidadao")
+    form_cadastro.addEventListener('submit', (event)=>{
+      event.preventDefault()
+    })
     alert("Dados inválidos")
+  }
+  else{
+    let submitForm = document.getElementById("form_cidadao")
+    submitForm.submit()
   }
 }
