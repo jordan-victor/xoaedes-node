@@ -24,6 +24,7 @@ async function historicoCidadao(){
             registros.forEach(registro=>{
                 todosCpf.push(registros[0].cpf_cidadao)
 
+            
 
                 //CRIANDO A TABELA DE HISTÓRICO
                 let novoGegistro = document.createElement("tr")
