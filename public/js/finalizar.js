@@ -102,7 +102,7 @@ btnFinalizar.addEventListener("click", async()=>{
     
     //Enviando novos registros para a API
     try{
-        fetch("https://api-xoaedes.onrender.com/checklistdengue", {
+        fetch("https://api-railway-production-7715.up.railway.app/checklistdengue", {     
             method:'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({

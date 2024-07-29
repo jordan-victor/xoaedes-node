@@ -1,5 +1,5 @@
 <%- include('../layouts/header') %>
-<body id="layoutPadrao">
+<body id="layoutPadrao" id="tela">
     <!--CABEÇALHO-->
     <div id="cabecalho">
         <header>
@@ -15,11 +15,13 @@
 
         <!--Histórico-->
         <main class="historico">
-            <div class="historico_container">
+            <div class="historico_container" id="historico_container">
                 <div class="id_historico"><p id="cpf_historico"></p></div>
                 <input type="text" value="<%=cpf%>" id="cpf" style="display: none!important" readonly>
                 <h3 id="mes"></h3>
-                <div class="containerTable">
+
+                <div class="containerTable" id="tabela">
+                    <img src="img/scroll.gif" alt="" class="scroll-icon" id="scrollIcon">
                     <table>
                         <thead>
                             <tr>
@@ -81,4 +83,5 @@
 </body>
 
 <script type="module" src="/js/scripts_cidadao/historico_cidadao.js"></script>
+<script type="module" src="/js/scripts_cidadao/scroll.js"></script>
 <%- include('../layouts/footer') %>

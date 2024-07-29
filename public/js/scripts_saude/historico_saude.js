@@ -9,7 +9,7 @@ pesquisar.addEventListener('click', async ()=>{
 
     //const consulta = await query(collection(db, 'checklistdengue'), where("cpf_cidadao", "==", cpfConsulta.value ), limit(10))
     //const querySnapshot = await getDocs(consulta)
-    fetch(`https://api-xoaedes.onrender.com/checklistdengue/${cpfConsulta.value.replace(".","").replace(".","").replace("-","")}`)
+    fetch(`https://api-railway-production-7715.up.railway.app/checklistdengue/${cpfConsulta.value.replace(".","").replace(".","").replace("-","")}`)
     .then(registros=>{
         return registros.json()
     })

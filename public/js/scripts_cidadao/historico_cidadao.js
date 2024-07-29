@@ -14,7 +14,7 @@ async function historicoCidadao(){
 
     let historico = document.getElementById("corpo_historico")
 
-    fetch(`https://api-xoaedes.onrender.com/checklistdengue/${cpfConsulta.value.replace(".","").replace(".","").replace("-","")}`)//${cpfConsulta.value.replace(".","").replace(".","").replace("-","")}
+    fetch(`https://api-railway-production-7715.up.railway.app/checklistdengue/${cpfConsulta.value.replace(".","").replace(".","").replace("-","")}`)//${cpfConsulta.value.replace(".","").replace(".","").replace("-","")}
     .then(registros=>{
         return registros.json()
     })

@@ -129,23 +129,31 @@ table tbody td i{
 
 
 
-
-
-
+/*ÍCONE DE SCROLL*/
+.scroll-icon{
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    right: 5vw;
+    z-index: 10;
+    bottom: 35%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.213);
+    display: none;
+}
 
 
 .containerTable{
     width: 100%;
     display: flex;
     justify-content: center;
+    position: relative;
 }
 @media(max-width:1054px){
     .containerTable{
         overflow-x: scroll;
         justify-content: flex-start;
-    }
+    }  
 }
-
 
 .containerTableEscola{
     width: 100%;
@@ -157,4 +165,10 @@ table tbody td i{
         overflow-x: scroll;
         justify-content: flex-start;
     }
+}
+
+@media(min-width:1055px){
+    #scrollIcon{
+        display: none;
+    }    
 }

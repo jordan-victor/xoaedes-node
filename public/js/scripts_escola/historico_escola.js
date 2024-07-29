@@ -9,7 +9,7 @@ async function historico(){
     let mes_agora = nomeMeses[mesAtual]
 
     let historico = document.getElementById("corpo_historico")
-    fetch(`https://api-xoaedes.onrender.com/checklistescolas/${inepEscola.value}`)
+    fetch(`https://api-railway-production-7715.up.railway.app/checklistescolas/${inepEscola.value}`)
     .then(registros=>{
         return registros.json()
     })
