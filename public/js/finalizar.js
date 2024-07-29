@@ -126,7 +126,6 @@ btnFinalizar.addEventListener("click", async()=>{
             })
         })
         
-        
         //criando mensagem na tela
         let msgContainer = document.getElementById("msg")
         msgContainer.style.display = "flex"
