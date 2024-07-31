@@ -12,7 +12,7 @@ btnFinalizar.addEventListener("click", async(event)=>{
 
     //Enviando novos registros para a API
     try{
-        fetch("https://api-xoaedes.onrender.com/alertaarboviroses", {
+        fetch("https://api-railway-production-7715.up.railway.app/alertaarboviroses", {
             method:'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify({
