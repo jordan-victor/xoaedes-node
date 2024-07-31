@@ -230,6 +230,9 @@ app.post('/historico_saude', async(req, res)=>{
 
 //falta a rota do alerta
 app.post('/alerta_saude', async(req, res)=>{
+    let data = getLocalDateTime().date.replace('-','/').replace('-','/')//`${dia}/${mes}/${ano}`
+    let hora = getLocalDateTime().time//`${hora_agora}:${minuto}`
+    /*
     let dia = new Date().getDate()
     let mes = new Date().getMonth()
     let ano = new Date().getFullYear()
@@ -238,6 +241,7 @@ app.post('/alerta_saude', async(req, res)=>{
     let hora_agora = new Date().getHours()
     let minuto = new Date().getMinutes()
     let hora = `${hora_agora}:${minuto}`
+    */
     let equipe_saude = req.body.equipe_saude;
     let nome_saude = req.body.nome_saude;
     let ine_saude = req.body.ine_saude;
