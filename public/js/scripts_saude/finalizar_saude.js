@@ -7,6 +7,7 @@ btnFinalizar.addEventListener("click", async()=>{
     let latitude = document.getElementById('latitude').value
     let longitude = document.getElementById('longitude').value
     let cpf_saude = document.getElementById('cpf_prof_saude').value
+    let cns = document.getElementById('ine').value
     //pegando items values do checklist e informando se está checked true ou false
     let item01 = ""
     let item02 = ""
@@ -110,6 +111,7 @@ btnFinalizar.addEventListener("click", async()=>{
             nome: nome,
             cpf_cidadao: cpf.replace(".","").replace(".","").replace("-",""),
             cpf_profissional: cpf_saude.replace(".","").replace(".","").replace("-",""),
+            cnes: cns,
             data: data,
             latitude: latitude,
             longitude: longitude,
